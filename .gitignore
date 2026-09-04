@@ -1,0 +1,22 @@
+# Bulk captured artifacts live outside git — too large, and irreplaceable
+# enough that they belong on backup media, not in history.
+archive/
+captures/
+scrape/
+*.pcap
+*.pkt
+*.kmp
+
+# research/*.md IS tracked — findings are part of the deliverable.
+
+# Live capture output — packets, memory dumps and extracted client data all live
+# outside the repo (D:\coa-capture, D:\coa-extract). Too large for history, and
+# memory dumps can contain credentials.
+*.pcapng
+*.dmp
+coa-capture/
+coa-extract/
+
+# Tool noise
+.playwright-mcp/
+oc.html
