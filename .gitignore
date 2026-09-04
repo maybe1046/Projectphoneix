@@ -20,3 +20,7 @@ coa-extract/
 # Tool noise
 .playwright-mcp/
 oc.html
+
+# Python
+__pycache__/
+*.pyc
