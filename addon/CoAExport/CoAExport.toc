@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: CoA Export
+## Notes: Dumps character and account state to SavedVariables before shutdown.
+## Author: projectphoenix
+## Version: 1.0
+## SavedVariables: CoAExportDB
+
+CoAExport.lua
