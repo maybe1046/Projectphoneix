@@ -1,0 +1,915 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  C_AccountInfo.GetCharacterAtIndex
+  C_AccountInfo.GetGMLevel
+  C_AccountInfo.GetNumCharacters
+  C_AccountInfo.IsGM
+  C_AddonPanel.saveFile
+  C_Appearance.ApplyPendingAppearances
+  C_Appearance.CanApplyPendingAppearances
+  C_Appearance.CanSeeAppearances
+  C_Appearance.CanSetAppearance
+  C_Appearance.ClearPendingAppearance
+  C_Appearance.GetActiveDiscount
+  C_Appearance.GetAlternativeIDs
+  C_Appearance.GetAppearanceDetails
+  C_Appearance.GetAppearanceDisplayInfo
+  C_Appearance.GetAppearanceForCategory
+  C_Appearance.GetAppearanceItemSet
+  C_Appearance.GetAppearanceWebURL
+  C_Appearance.GetCreatureDisplayItems
+  C_Appearance.GetEtherealBazaarWebURL
+  C_Appearance.GetItemAppearanceID
+  C_Appearance.GetPendingAppearance
+  C_Appearance.HasPendingAppearances
+  C_Appearance.IsEtherealBazaarAppearance
+  C_Appearance.IsTransmogable
+  C_Appearance.SetCanSeeAppearances
+  C_Appearance.SetPendingAppearance
+  C_AppearanceCollection.ApplyCategoryFilter
+  C_AppearanceCollection.CollectItemAppearance
+  C_AppearanceCollection.GetAppearanceTypes
+  C_AppearanceCollection.GetAvailableChapters
+  C_AppearanceCollection.GetAvailableSeasons
+  C_AppearanceCollection.GetCategoriesForType
+  C_AppearanceCollection.GetCategoryAppearances
+  C_AppearanceCollection.GetCategoryInfo
+  C_AppearanceCollection.GetCategoryMaxPages
+  C_AppearanceCollection.GetCollectedCount
+  C_AppearanceCollection.GetSeasonalItems
+  C_AppearanceCollection.IsAppearanceCollected
+  C_AppearanceOutfit.DeleteOutfit
+  C_AppearanceOutfit.GetCurrentOutfitName
+  C_AppearanceOutfit.GetOutfitInfo
+  C_AppearanceOutfit.SaveOutfit
+  C_AppearanceOutfit.SetPendingOutfit
+  C_AssetQueryService.TryCacheCreature
+  C_AssetQueryService.TryCacheItem
+  C_AssetQueryService.TryCacheQuest
+  C_Aura.GetArmorPenetrationModifier
+  C_Aura.UnitAura
+  C_Aura.UnitHasAura
+  C_BugTracker.ClearReport
+  C_BugTracker.SetReportCategory
+  C_BugTracker.SetReportDescription
+  C_BugTracker.SetReportPriority
+  C_BugTracker.SetReportPublic
+  C_BugTracker.SetReportTitle
+  C_BugTracker.SubmitReport
+  C_BuildCreator.ActivateBuild
+  C_BuildCreator.BookmarkBuild
+  C_BuildCreator.CanActivateBuild
+  C_BuildCreator.DeactivateBuild
+  C_BuildCreator.DeleteBuild
+  C_BuildCreator.GetActiveBuild
+  C_BuildCreator.GetBookmarkedBuildAtIndex
+  C_BuildCreator.GetBuild
+  C_BuildCreator.GetBuildAtIndex
+  C_BuildCreator.GetNumBookmarkedBuilds
+  C_BuildCreator.GetNumBuilds
+  C_BuildCreator.GetSpell
+  C_BuildCreator.IsOwnedBuild
+  C_BuildCreator.IsUpvotedBuild
+  C_BuildCreator.QueryAllBuilds
+  C_BuildCreator.QueryBuild
+  C_BuildCreator.RateBuild
+  C_BuildCreator.UpdateFilter
+  C_BuildDraft.GetDraftableBuild
+  C_BuildDraft.GetDraftedBuild
+  C_BuildDraft.GetNumDraftableBuilds
+  C_BuildDraft.IsAwaitingRolePrompt
+  C_BuildDraft.IsCompletedBuild
+  C_BuildDraft.SelectRole
+  C_BuildEditor.AddArmorType
+  C_BuildEditor.AddRandomEnchant
+  C_BuildEditor.AddSpell
+  C_BuildEditor.AddWeaponType
+  C_BuildEditor.CanAddArmorType
+  C_BuildEditor.CanAddSpell
+  C_BuildEditor.CanAddWeaponType
+  C_BuildEditor.CanPublishBuild
+  C_BuildEditor.CanRemoveSpell
+  C_BuildEditor.CanSetEnchantFlags
+  C_BuildEditor.CanSetIsCoreAbility
+  C_BuildEditor.CanSetIsEmpoweringAbility
+  C_BuildEditor.CanSetIsOptimalAbility
+  C_BuildEditor.CanSetIsSynergisticAbility
+  C_BuildEditor.CanSetSpellFlags
+  C_BuildEditor.CanSetSpellLevel
+  C_BuildEditor.DiscardPendingBuild
+  C_BuildEditor.DoesBuildHaveEnchant
+  C_BuildEditor.DoesBuildHaveSpellID
+  C_BuildEditor.EditBuild
+  C_BuildEditor.GetEssenceForLevel
+  C_BuildEditor.GetFilteredEntryAtIndex
+  C_BuildEditor.GetNumFilteredEntries
+  C_BuildEditor.GetPendingBuild
+  C_BuildEditor.GetQualityInfoForLevel
+  C_BuildEditor.GetSpellByID
+  C_BuildEditor.ImportBuild
+  C_BuildEditor.PublishBuild
+  C_BuildEditor.RemoveArmorType
+  C_BuildEditor.RemoveRandomEnchant
+  C_BuildEditor.RemoveSpell
+  C_BuildEditor.RemoveWeaponType
+  C_BuildEditor.SetCategory
+  C_BuildEditor.SetComment
+  C_BuildEditor.SetDescription
+  C_BuildEditor.SetDifficultyRating
+  C_BuildEditor.SetEnchantFlags
+  C_BuildEditor.SetEnchantLevel
+  C_BuildEditor.SetEnchantStacks
+  C_BuildEditor.SetFilteredEntries
+  C_BuildEditor.SetIcon
+  C_BuildEditor.SetIsCoreAbility
+  C_BuildEditor.SetIsEmpoweringAbility
+  C_BuildEditor.SetIsOptimalAbility
+  C_BuildEditor.SetIsSynergisticAbility
+  C_BuildEditor.SetName
+  C_BuildEditor.SetPrimaryStat
+  C_BuildEditor.SetRoles
+  C_BuildEditor.SetSpellFlags
+  C_BuildEditor.SetSpellLevel
+  C_CVar.Exists
+  C_CVar.Get
+  C_CVar.GetBitfield
+  C_CVar.GetBool
+  C_CVar.GetByteString
+  C_CVar.GetDefault
+  C_CVar.GetDefaultBitfield
+  C_CVar.GetDefaultBool
+  C_CVar.GetDefaultNumber
+  C_CVar.GetFlag
+  C_CVar.GetMax
+  C_CVar.GetMin
+  C_CVar.GetNumber
+  C_CVar.Maximums
+  C_CVar.Minimums
+  C_CVar.RegisterSavedCVar
+  C_CVar.RegisterSavedCharacterCVar
+  C_CVar.ResetToDefault
+  C_CVar.Set
+  C_CVar.SetBitfield
+  C_CVar.SetCVarSave
+  C_CVar.SetFlag
+  C_Cache.Queried
+  C_Callboard.GetView
+  C_Callboard.RequestView
+  C_CallboardCache.GetCallboardCacheInfo
+  C_CallboardCache.GetCurrentPoints
+  C_CallboardCache.GetItemLevelInfo
+  C_CallboardCache.GetPointsForQuest
+  C_Challenge.CanActivateChallenge
+  C_Challenge.CanDeactivateChallenge
+  C_Challenge.GetChallengeAtIndex
+  C_Challenge.GetChallengeCompletion
+  C_Challenge.GetChallengeCompletions
+  C_Challenge.GetChallengeFailures
+  C_Challenge.GetChallengeIDByIndex
+  C_Challenge.GetChallengeInfo
+  C_Challenge.GetChallengeInfoByLevel
+  C_Challenge.GetChallengeLevels
+  C_Challenge.GetChallengesWithGroupID
+  C_Challenge.GetConditionLocalization
+  C_Challenge.GetModifierLocalization
+  C_Challenge.GetNumChallenges
+  C_Challenge.GetPendingChallenges
+  C_Challenge.GetRequirementLocalization
+  C_Challenge.GetRuleLocalization
+  C_Challenge.HasBrokenChallengeRule
+  C_Challenge.HasChallengeRule
+  C_Challenge.IsChallengeActive
+  C_Challenge.QueryChallengeCompletions
+  C_Challenge.QueryChallengeFailures
+  C_Challenge.SendChallengeSyncResponse
+  C_Challenge.SetChallengeFilter
+  C_Challenge.StartChallenge
+  C_Challenge.StopChallenge
+  C_ChallengeMode.GetCompletionInfo
+  C_CharacterAdvancement.ActivateLoadout
+  C_CharacterAdvancement.AddByEntryID
+  C_CharacterAdvancement.AddSuggestionContextOverride
+  C_CharacterAdvancement.ApplyPendingBuild
+  C_CharacterAdvancement.CanAddByEntryID
+  C_CharacterAdvancement.CanApplyPendingBuild
+  C_CharacterAdvancement.CanClearPendingBuild
+  C_CharacterAdvancement.CanLearnID
+  C_CharacterAdvancement.CanRemoveByEntryID
+  C_CharacterAdvancement.CanSwapEntriesByID
+  C_CharacterAdvancement.CanSwitchActiveChrSpec
+  C_CharacterAdvancement.CanUnlearnAllSpells
+  C_CharacterAdvancement.CanUnlearnAllTalents
+  C_CharacterAdvancement.CanUnlearnID
+  C_CharacterAdvancement.CancelPendingBuild
+  C_CharacterAdvancement.ClearPendingBuild
+  C_CharacterAdvancement.ClearPendingBuildByTab
+  C_CharacterAdvancement.ClearRecentlyLearnedEntries
+  C_CharacterAdvancement.ClearSuggestionContextOverrides
+  C_CharacterAdvancement.ExportBuild
+  C_CharacterAdvancement.GetAbilityEssenceCost
+  C_CharacterAdvancement.GetActiveChrSpec
+  C_CharacterAdvancement.GetActiveSpecID
+  C_CharacterAdvancement.GetAllEntries
+  C_CharacterAdvancement.GetCategories
+  C_CharacterAdvancement.GetCategoryDisplayInfo
+  C_CharacterAdvancement.GetClassInfo
+  C_CharacterAdvancement.GetClassName
+  C_CharacterAdvancement.GetClassPointInvestment
+  C_CharacterAdvancement.GetEntriesAvailableForSwapInClass
+  C_CharacterAdvancement.GetEntriesAvailableForTrade
+  C_CharacterAdvancement.GetEntryByInternalID
+  C_CharacterAdvancement.GetEntryBySpellID
+  C_CharacterAdvancement.GetExpectedAE
+  C_CharacterAdvancement.GetFilteredEntryAtIndex
+  C_CharacterAdvancement.GetFilteredEntryAtIndexByCategory
+  C_CharacterAdvancement.GetGlobalAEInvestment
+  C_CharacterAdvancement.GetGlobalTEInvestment
+  C_CharacterAdvancement.GetImplicitByClass
+  C_CharacterAdvancement.GetInspectInfo
+  C_CharacterAdvancement.GetInspectedBuild
+  C_CharacterAdvancement.GetInternalID
+  C_CharacterAdvancement.GetKnownSpellEntries
+  C_CharacterAdvancement.GetKnownSpellEntriesForClass
+  C_CharacterAdvancement.GetKnownSpells
+  C_CharacterAdvancement.GetKnownTalentEntries
+  C_CharacterAdvancement.GetKnownTalentEntriesForClass
+  C_CharacterAdvancement.GetLearnedAE
+  C_CharacterAdvancement.GetLearnedTE
+  C_CharacterAdvancement.GetMasteriesByClass
+  C_CharacterAdvancement.GetNumFilteredEntries
+  C_CharacterAdvancement.GetNumFilteredEntriesByCategory
+  C_CharacterAdvancement.GetPendingClassPointInvestment
+  C_CharacterAdvancement.GetPendingGlobalAEInvestment
+  C_CharacterAdvancement.GetPendingGlobalTEInvestment
+  C_CharacterAdvancement.GetPendingRankByEntryID
+  C_CharacterAdvancement.GetPendingRemainingAE
+  C_CharacterAdvancement.GetPendingRemainingTE
+  C_CharacterAdvancement.GetPendingTabTEInvestment
+  C_CharacterAdvancement.GetQualityCount
+  C_CharacterAdvancement.GetQualityInfo
+  C_CharacterAdvancement.GetQualityLimit
+  C_CharacterAdvancement.GetRemainingAE
+  C_CharacterAdvancement.GetRemainingTE
+  C_CharacterAdvancement.GetRootSpellTagTypes
+  C_CharacterAdvancement.GetSpellTagTypeDisplayInfo
+  C_CharacterAdvancement.GetSpellTagTypes
+  C_CharacterAdvancement.GetSpellsByClass
+  C_CharacterAdvancement.GetSuggestedStats
+  C_CharacterAdvancement.GetTabName
+  C_CharacterAdvancement.GetTabTEInvestment
+  C_CharacterAdvancement.GetTalentEssenceCost
+  C_CharacterAdvancement.GetTalentRankByID
+  C_CharacterAdvancement.GetTalentRankBySpellID
+  C_CharacterAdvancement.GetTalentsByClass
+  C_CharacterAdvancement.HasAnySuggestionContextOverrides
+  C_CharacterAdvancement.ImportPendingBuild
+  C_CharacterAdvancement.ImportPendingBuildID
+  C_CharacterAdvancement.InspectUnit
+  C_CharacterAdvancement.IsAbilityID
+  C_CharacterAdvancement.IsConnectionAllowed
+  C_CharacterAdvancement.IsFiltered
+  C_CharacterAdvancement.IsKnownID
+  C_CharacterAdvancement.IsKnownSpellID
+  C_CharacterAdvancement.IsLockedID
+  C_CharacterAdvancement.IsMastery
+  C_CharacterAdvancement.IsPending
+  C_CharacterAdvancement.IsPendingBuildAvailable
+  C_CharacterAdvancement.IsPendingEntryID
+  C_CharacterAdvancement.IsSuggestionContextOverride
+  C_CharacterAdvancement.IsTalentAbilityID
+  C_CharacterAdvancement.IsTalentAbilitySpellID
+  C_CharacterAdvancement.IsTalentID
+  C_CharacterAdvancement.IsTalentSpellID
+  C_CharacterAdvancement.IsTrait
+  C_CharacterAdvancement.KnowsConnectedNodesFor
+  C_CharacterAdvancement.LearnID
+  C_CharacterAdvancement.LockID
+  C_CharacterAdvancement.MeetsInvestmentForAddByEntryID
+  C_CharacterAdvancement.PickupSpell
+  C_CharacterAdvancement.RemoveByEntryID
+  C_CharacterAdvancement.RemoveSuggestionContextOverride
+  C_CharacterAdvancement.SetFilteredEntries
+  C_CharacterAdvancement.SetFilteredEntriesByCategory
+  C_CharacterAdvancement.SetLoadoutName
+  C_CharacterAdvancement.SetLoadoutSortOrder
+  C_CharacterAdvancement.ShouldConfirmLearnID
+  C_CharacterAdvancement.ShouldConfirmUnlearnAllSpells
+  C_CharacterAdvancement.ShouldConfirmUnlearnAllTalents
+  C_CharacterAdvancement.ShouldConfirmUnlearnID
+  C_CharacterAdvancement.SwapEntriesByID
+  C_CharacterAdvancement.SwitchActiveChrSpec
+  C_CharacterAdvancement.UnitKnownID
+  C_CharacterAdvancement.UnitTalentRankByID
+  C_CharacterAdvancement.UnlearnAllSpells
+  C_CharacterAdvancement.UnlearnAllTalents
+  C_CharacterAdvancement.UnlearnID
+  C_CharacterAdvancement.UnlockID
+  C_CharacterCreate.CanCreateArchetype
+  C_CharacterCreate.CanCreateClass
+  C_CharacterCreate.CanCreateCoA
+  C_CharacterCreate.CanCreateHero
+  C_CharacterCreate.CanCreateWCR
+  C_CharacterCreate.ClearClassPreview
+  C_CharacterCreate.CycleCustomizationSkipLocked
+  C_CharacterCreate.Dress
+  C_CharacterCreate.GetArchetypeCategories
+  C_CharacterCreate.GetArchetypeCategoryInfo
+  C_CharacterCreate.GetArchetypeInfo
+  C_CharacterCreate.GetArchetypeRoleInfo
+  C_CharacterCreate.GetArchetypeRoles
+  C_CharacterCreate.GetArchetypeSpellDescription
+  C_CharacterCreate.GetArchetypes
+  C_CharacterCreate.GetCameraPosition
+  C_CharacterCreate.GetClassGuideRoleInfo
+  C_CharacterCreate.GetClassGuideRoles
+  C_CharacterCreate.GetClassGuideSubroleClasses
+  C_CharacterCreate.GetClassGuideSubroleInfo
+  C_CharacterCreate.GetClassGuideSubroles
+  C_CharacterCreate.PreviewClassOutfit
+  C_CharacterCreate.ResetCameraPosition
+  C_CharacterCreate.SetCameraPosition
+  C_CharacterCreate.SetSelectedArchetype
+  C_CharacterCreate.Undress
+  C_CharacterCreate.ZoomIn
+  C_CharacterCreate.ZoomOut
+  C_CharacterCustomizationUnlocks.GetCurrentOptionInfo
+  C_CharacterList.GetCounts
+  C_CharacterList.GetEntries
+  C_CharacterList.RequestActivate
+  C_CharacterList.RequestDeactivate
+  C_ClassInfo.GetAllSpecs
+  C_ClassInfo.GetClassBySpecName
+  C_ClassInfo.GetSpecInfo
+  C_ClassInfo.GetSpecInfoByID
+  C_CoA.SendMulticastSelection
+  C_Config.GetBoolConfig
+  C_Config.GetIntConfig
+  C_Config.GetRateConfig
+  C_ContentLoader.Runner
+  C_CustomStore.ApplyCustomStoreFilter
+  C_CustomStore.GetCustomStoreData
+  C_CustomStore.GetCustomStoreItemInfo
+  C_CustomStore.GetCustomStoreMaxPages
+  C_CustomStore.GetCustomStoreTypeInfo
+  C_CustomStore.IsItemLockedDueToAchievement
+  C_CustomStore.IsItemLockedDueToGameEvent
+  C_CustomStore.PurchaseCustomStoreItem
+  C_CustomStore.QueryCustomStore
+  C_Deflate.internals
+  C_DraftRewards.CanClaimScrollOfFortuneRewards
+  C_DraftRewards.ClaimScrollOfFortuneRewards
+  C_DraftRewards.GetLevelingInfo
+  C_DraftRewards.GetMarkOfAscensionCost
+  C_DraftRewards.GetNumClaimableHandOfFateRewards
+  C_DraftRewards.GetNumClaimableScrollOfFortuneRewards
+  C_DraftRewards.GetNumClaimedScrollOfFortuneRewards
+  C_DraftRewards.GetRewards
+  C_DraftRewards.GetScrollOfFortuneRewardsReleaseInfo
+  C_EquipmentSet.PlaceInBank
+  C_ExtraActionButton.GetExtraActionButtonAtIndex
+  C_ExtraActionButton.GetExtraActionButtonInfo
+  C_ExtraActionButton.GetNumExtraActionButtons
+  C_Flipbook.Updater
+  C_Format.Format
+  C_GMTicket.ApproveAutomatedMessage
+  C_GMTicket.AssignGMTicket
+  C_GMTicket.DeclineAutomatedMessage
+  C_GameMode.IsGameModeActive
+  C_Gossip.currentNPC
+  C_GroupFinder.GetListedGroupID
+  C_HighRisk.CanToggleFelCommutation
+  C_HighRisk.GetInsuranceCostPerSlot
+  C_HighRisk.GetInsuranceTotalCost
+  C_HighRisk.IsFelCommutationActive
+  C_HighRisk.ToggleFelCommutation
+  C_Hook.EVENT_TIMES
+  C_Hook.allListener
+  C_Hook.buckets
+  C_Hook.events
+  C_Hook.refs
+  C_Instance.HasCheckpoint
+  C_Instance.IsInArena
+  C_Instance.IsInBattleground
+  C_Instance.IsInDungeon
+  C_Instance.IsInPVE
+  C_Instance.IsInPVP
+  C_Instance.IsInRaid
+  C_InventoryState.Inventory
+  C_Item.GetColoredItemName
+  C_Item.lastUsedItem
+  C_ItemSet.GetAppearances
+  C_ItemSet.GetItemSetName
+  C_ItemSet.GetItemSetNumCollected
+  C_Keystones.GetCurrentSetBest
+  C_Keystones.GetCurrentSetString
+  C_Keystones.GetDungeonBest
+  C_Keystones.GetDungeonBestLink
+  C_Keystones.GetKeystoneDungeonInfo
+  C_Keystones.GetKeystoneInInventory
+  C_Keystones.GetKeystoneInInventoryItemID
+  C_Keystones.GetPlayerSaveKey
+  C_Keystones.GetProfileLink
+  C_Keystones.GetSetBest
+  C_Keystones.GetTimedDungeonsForExpansion
+  C_Keystones.SaveKeystoneRun
+  C_Keystones.playerSaveKey
+  C_LFG.RequiresGameEvent
+  C_Logger.ClearLUA
+  C_Logger.Error
+  C_Logger.Info
+  C_Logger.LFG
+  C_Logger.LUA
+  C_LootLockout.ListInstanceBinds
+  C_LootLockout.QueryInstanceBinds
+  C_LootLockout.ResetInstanceDifficulty
+  C_Manastorm.CanEnter
+  C_Manastorm.CanLeave
+  C_Manastorm.Enter
+  C_Manastorm.GetActiveLevel
+  C_Manastorm.GetActiveManastormID
+  C_Manastorm.GetActiveManastormType
+  C_Manastorm.GetAvailableLoadoutSpells
+  C_Manastorm.GetBoss
+  C_Manastorm.GetEnterableLevels
+  C_Manastorm.GetExperienceModifier
+  C_Manastorm.GetLoadoutSpellAtIndex
+  C_Manastorm.GetManastormCacheInfo
+  C_Manastorm.GetMaxCompletedLevels
+  C_Manastorm.GetNumLoadoutSlots
+  C_Manastorm.GetRewardLimitProgress
+  C_Manastorm.GetRewardModifier
+  C_Manastorm.GetRewardVisibility
+  C_Manastorm.GetStageBonusExperience
+  C_Manastorm.IsInManastorm
+  C_Manastorm.Leave
+  C_Manastorm.SetLoadoutSpellAtIndex
+  C_Map.GetBestMapForUnit
+  C_MysticEnchant.CanEquipSlot
+  C_MysticEnchant.CanInspect
+  C_MysticEnchant.CanPurchaseMysticExtract
+  C_MysticEnchant.GetAppliedEnchant
+  C_MysticEnchant.GetApplyChanges
+  C_MysticEnchant.GetCollectionReforgeChanges
+  C_MysticEnchant.GetCollectionReforgeItemCost
+  C_MysticEnchant.GetCollectionReforgeSlotCost
+  C_MysticEnchant.GetDisenchantCost
+  C_MysticEnchant.GetEnchantInfoByItem
+  C_MysticEnchant.GetEnchantInfoBySpell
+  C_MysticEnchant.GetFilteredMysticScrollAtIndex
+  C_MysticEnchant.GetMysticScrollCost
+  C_MysticEnchant.GetNumFilteredMysticScrolls
+  C_MysticEnchant.GetProgress
+  C_MysticEnchant.GetReforgeCost
+  C_MysticEnchant.HasNearbyMysticAltar
+  C_MysticEnchant.Inspect
+  C_MysticEnchant.PurchaseMysticExtract
+  C_MysticEnchant.QueryEnchants
+  C_MysticEnchant.SetMysticScrollFilter
+  C_MysticEnchant.UndoApply
+  C_MysticEnchant.UndoCollectionReforge
+  C_MysticEnchantPreset.GetNumPresets
+  C_MysticEnchantPreset.GetPresetData
+  C_MythicPlus.GetActiveKeystoneChampions
+  C_MythicPlus.GetActiveKeystoneEncounters
+  C_MythicPlus.GetActiveKeystoneInfo
+  C_MythicPlus.GetActiveKeystoneTime
+  C_MythicPlus.GetActiveKeystoneTrash
+  C_MythicPlus.GetCurrentAffixes
+  C_MythicPlus.GetKeystoneInfo
+  C_MythicPlus.GetMapEncounters
+  C_MythicPlus.GetMapFinalEncounter
+  C_MythicPlus.IsItemKeystone
+  C_MythicPlus.IsKeystoneActive
+  C_NamePlate.GetNamePlateForUnit
+  C_NamePlate.SetNamePlateSize
+  C_NamePlateManager.ApplyFPSIncrease
+  C_NamePlateManager.CheckNamePlateMotion
+  C_NamePlateManager.DisableBlizzPlate
+  C_NamePlateManager.EnumerateActiveNamePlates
+  C_NamePlateManager.GetNamePlateSize
+  C_NamePlateManager.IsNamePlateMoving
+  C_NamePlateManager.RefreshNamePlateSize
+  C_NamePlateManager.SetEnableResizeNamePlates
+  C_NamePlateManager.SetNamePlateSize
+  C_Player.GetLevel
+  C_PlayerPoll.CanChangeQuestionChoice
+  C_PlayerPoll.CanSubmitAnswer
+  C_PlayerPoll.GetNumQuestionChoices
+  C_PlayerPoll.GetNumQuestions
+  C_PlayerPoll.GetQuestionChoiceInfo
+  C_PlayerPoll.GetQuestionInfo
+  C_PlayerPoll.GetQuestionType
+  C_PlayerPoll.HasUnansweredQuestions
+  C_PlayerPoll.SubmitAnswer
+  C_PlayerTicket.CanCloseTicket
+  C_PlayerTicket.CanCreateTicket
+  C_PlayerTicket.CanReopenTicket
+  C_PlayerTicket.CanSendTicketMessage
+  C_PlayerTicket.CloseTicket
+  C_PlayerTicket.CreateTicket
+  C_PlayerTicket.GetCurrentTicket
+  C_PlayerTicket.GetTicketMessages
+  C_PlayerTicket.IsResponseSeen
+  C_PlayerTicket.MarkResponseSeen
+  C_PlayerTicket.ReopenTicket
+  C_PlayerTicket.SendTicketMessage
+  C_PopupQueue.Achievements
+  C_PopupQueue.Frame
+  C_PopupQueue.Queue
+  C_PrimaryStat.AuraToID
+  C_PrimaryStat.Auras
+  C_PrimaryStat.SpellToID
+  C_PrimaryStat.internalIds
+  C_Quest.GetTitleByID
+  C_Quest.PortraitData
+  C_Quest.felforgedChallenges
+  C_Quest.titles
+  C_QuestLog.GetQuestType
+  C_QuestLog.GetUnitQuestInfo
+  C_QuestLog.GetZoneStoryInfo
+  C_QuestLog.IsLegendaryQuest
+  C_Realm.IsDevelopment
+  C_Realm.IsLive
+  C_Realm.IsPTR
+  C_Realm.IsSeasonal
+  C_RealmMerge.GetAvailableOptions
+  C_RealmMerge.GetTargetRealm
+  C_RealmMerge.IsMergeAvailable
+  C_RealmMerge.NeedsSetTargetRealm
+  C_RealmMerge.SetTargetRealm
+  C_RealmSelect.GetRealmInfo
+  C_RecoveryService.GetCategoryItemAtIndex
+  C_RecoveryService.GetNumItemsInCategory
+  C_RecoveryService.QueryCategory
+  C_RecoveryService.RecoverCategoryItemAtIndex
+  C_RecoveryService.UpdateFilter
+  C_Scenario.GetActiveStage
+  C_Scenario.GetEncounterAtIndex
+  C_Scenario.GetNumEncounters
+  C_Scenario.GetScenarioInfo
+  C_Scenario.IsInScenario
+  C_Serialize.jsonEncoder
+  C_SkillCard.GetCardAtIndex
+  C_SkillCard.GetCardID
+  C_SkillCard.GetCardSpellID
+  C_SkillCard.GetMaxCardCount
+  C_SkillCard.GetSkillCardInfo
+  C_SkillCard.GetSkillCardInfoAtIndex
+  C_SkillCard.GetSkillCardQuality
+  C_SkillCard.IsCardAtIndexActive
+  C_SkillCard.IsCardAtIndexBlocked
+  C_SkillCard.IsCardedID
+  C_SkillCard.IsCardedSpellID
+  C_SkillCard.RemoveCardAtIndex
+  C_SkillCard.SetCardAtIndex
+  C_SkillCardCollection.CanPurchaseSealedCard
+  C_SkillCardCollection.CanPurchaseSealedCardBoosterPack
+  C_SkillCardCollection.ClaimPendingSkillCard
+  C_SkillCardCollection.GetMaxNumPurchasableSealedCardBoosterPacks
+  C_SkillCardCollection.GetNumPendingSkillCards
+  C_SkillCardCollection.GetNumSkillCards
+  C_SkillCardCollection.GetPendingSkillCardAtIndex
+  C_SkillCardCollection.GetProgress
+  C_SkillCardCollection.GetSealedCardBoosterPackCost
+  C_SkillCardCollection.GetSealedCardCost
+  C_SkillCardCollection.GetSkillCardAtIndex
+  C_SkillCardCollection.HasAnySkillCardsCollected
+  C_SkillCardCollection.IsCollected
+  C_SkillCardCollection.PurchaseSealedCard
+  C_SkillCardCollection.PurchaseSealedCardBoosterPack
+  C_SkillCardCollection.SetSkillCardFilter
+  C_Spell.AutoPlaceIgnored
+  C_Spell.GetFirstRank
+  C_Spell.GetMaxLearnableRank
+  C_Spell.GetSpellID
+  C_Spell.HasMultipleSpellRanks
+  C_Spell.HasRuneUI
+  C_Spell.IsHarmfulSpell
+  C_Spell.IsHelpfulSpell
+  C_Spell.IsImmunitySpell
+  C_Spell.IsTrainerSpell
+  C_Spell.knownSpellNames
+  C_SpellActivationOverlay.GetSpellActivationOverlayInfo
+  C_SpellActivationOverlay.IsSpellOverlayed
+  C_SuperTrack.ClearSuperTracker
+  C_SuperTrack.GetSuperTrackedPosition
+  C_SuperTrack.GetSuperTrackedWorldPosition
+  C_SuperTrack.GetTargetState
+  C_SuperTrack.IsSuperTrackingAnything
+  C_SuperTrack.PositionFrame
+  C_SuperTrack.SetSuperTrackedCorpse
+  C_SuperTrack.SetSuperTrackedPosition
+  C_SuperTrack.SetSuperTrackedQuestID
+  C_TemporalContracts.ActivateAllTemporalContractsByContentType
+  C_TemporalContracts.ActivateTemporalContract
+  C_TemporalContracts.GetCategoryName
+  C_TemporalContracts.GetQuestCategory
+  C_TemporalContracts.GetQuestSortIDs
+  C_TemporalContracts.GetQuestSortText
+  C_Timer.After
+  C_Timer.NewTicker
+  C_Token.GetTokenAmount
+  C_Token.GetTokenInfo
+  C_Token.GetTokenTypes
+  C_TrialCreator.ActivateTrial
+  C_TrialCreator.CanActivateTrial
+  C_TrialCreator.CanDeactivateTrial
+  C_TrialCreator.CanEditTrial
+  C_TrialCreator.CanSaveTrial
+  C_TrialCreator.DeactivateTrial
+  C_TrialCreator.DeleteTrial
+  C_TrialCreator.GetActiveTrial
+  C_TrialCreator.GetNumTrials
+  C_TrialCreator.GetTrialAtIndex
+  C_TrialCreator.GetTrialCompletion
+  C_TrialCreator.GetTrialCompletions
+  C_TrialCreator.GetTrialIDByIndex
+  C_TrialCreator.GetTrialInfo
+  C_TrialCreator.QueryTrialCompletions
+  C_TrialCreator.QueryTrials
+  C_TrialCreator.RateTrial
+  C_TrialCreator.SaveTrial
+  C_TrialCreator.SetTrialFilter
+  C_Tutorial.AnyUnclaimedRewards
+  C_Tutorial.CanCollectReward
+  C_Tutorial.CanToggleMentorStatus
+  C_Tutorial.CollectReward
+  C_Tutorial.GetAvailableMentorAtIndex
+  C_Tutorial.GetCategories
+  C_Tutorial.GetCategoryInfo
+  C_Tutorial.GetCategoryProgress
+  C_Tutorial.GetIndexByKeywordID
+  C_Tutorial.GetKeywordAtIndex
+  C_Tutorial.GetKeywordID
+  C_Tutorial.GetKeywordInfo
+  C_Tutorial.GetMentorSpecializationActive
+  C_Tutorial.GetMentorSpecializationInfo
+  C_Tutorial.GetMentorSpecializations
+  C_Tutorial.GetNumAvailableMentors
+  C_Tutorial.GetNumKeywords
+  C_Tutorial.GetNumTutorials
+  C_Tutorial.GetObjectiveInfo
+  C_Tutorial.GetObjectives
+  C_Tutorial.GetRewards
+  C_Tutorial.GetTutorialAtIndex
+  C_Tutorial.GetTutorialByID
+  C_Tutorial.GetTutorialDisplay
+  C_Tutorial.GetTutorialsRequiredForMentorStatus
+  C_Tutorial.IsCategoryEnabled
+  C_Tutorial.IsMentorStatusActive
+  C_Tutorial.IsRewardCollected
+  C_Tutorial.IsTutorialAvailable
+  C_Tutorial.IsTutorialComplete
+  C_Tutorial.IsTutorialRequiredForMentorStatus
+  C_Tutorial.QueryActiveMentors
+  C_Tutorial.SetAvailableMentorFilter
+  C_Tutorial.SetKeywordFilter
+  C_Tutorial.SetTutorialFilter
+  C_Tutorial.StartQuest
+  C_Tutorial.ToggleMentorStatus
+  C_UICamera.GetCameraInfo
+  C_UICamera.GetItemCameraID
+  C_VanityCollection.GetDPPrice
+  C_VanityCollection.GetItem
+  C_VanityCollection.GetItemByLearnedSpell
+  C_VanityCollection.GetOwnerByContentItem
+  C_VanityCollection.GetRandomItem
+  C_VanityCollection.GetSeasonalShowcaseItems
+  C_VanityCollection.IsCollectionItemOwned
+  C_VanityCollection.IsConsolidatedVanityBuff
+  C_VanityCollection.IsPurchaseInProgress
+  C_VanityCollection.Purchase
+  C_VanityCollection.PurchaseWebShopItem
+  C_VanityCollection.QueryItems
+  C_VanityCollection.RequestDelivery
+  C_Wildcard.AddDesiredID
+  C_Wildcard.AddUndesiredID
+  C_Wildcard.CanAddDesiredID
+  C_Wildcard.CanAddUndesiredID
+  C_Wildcard.CanRepurchaseAnyRolls
+  C_Wildcard.CanRepurchaseRolls
+  C_Wildcard.CanRepurchaseTalentRolls
+  C_Wildcard.CanRollAbilities
+  C_Wildcard.CanShowStartingChoice
+  C_Wildcard.CanStartRapidRolling
+  C_Wildcard.CanUseRapidRolling
+  C_Wildcard.CancelRapidRolling
+  C_Wildcard.ClearDesiredSpells
+  C_Wildcard.ClearUndesiredSpells
+  C_Wildcard.ContinueRapidRolling
+  C_Wildcard.GetFilteredDesiredEntryAtIndex
+  C_Wildcard.GetFilteredUndesiredEntryAtIndex
+  C_Wildcard.GetMaximumRapidRolls
+  C_Wildcard.GetNextUnlearnedID
+  C_Wildcard.GetNumFilteredDesiredEntries
+  C_Wildcard.GetNumFilteredUndesiredEntries
+  C_Wildcard.GetNumRepurchasableRolls
+  C_Wildcard.GetNumRepurchasableTalentRolls
+  C_Wildcard.GetRapidRollAbilityBreakpointInfo
+  C_Wildcard.GetRapidRollTalentBreakpointInfo
+  C_Wildcard.GetRapidRollingState
+  C_Wildcard.GetRepurchaseRollCost
+  C_Wildcard.GetRepurchaseTalentRollCost
+  C_Wildcard.GetRollIcons
+  C_Wildcard.GetStartingChoiceEntries
+  C_Wildcard.IsAwaitingRapidRollingTalentUpgradeRoll
+  C_Wildcard.IsDesiredID
+  C_Wildcard.IsRollRequestBlocked
+  C_Wildcard.IsUndesiredID
+  C_Wildcard.RemoveDesiredID
+  C_Wildcard.RemoveUndesiredID
+  C_Wildcard.RepurchaseRolls
+  C_Wildcard.RepurchaseTalentRolls
+  C_Wildcard.RerollUnlockedStartingAbilities
+  C_Wildcard.RollAbilities
+  C_Wildcard.SetFilteredDesiredEntries
+  C_Wildcard.SetFilteredUndesiredEntries
+  C_Wildcard.SetRapidRollingSelections
+  C_Wildcard.StartRapidRolling
+  C_Wildcard.WillRollFirstNonStartingAbility
+  C_Wildcard.WillRollStartingAbilities
+  C_WildcardRewards.CanClaimScrollOfFortuneRewards
+  C_WildcardRewards.ClaimScrollOfFortuneRewards
+  C_WildcardRewards.GetLevelingInfo
+  C_WildcardRewards.GetMarkOfAscensionCost
+  C_WildcardRewards.GetNumClaimableScrollOfFortuneRewards
+  C_WildcardRewards.GetNumClaimedScrollOfFortuneRewards
+  C_WildcardRewards.GetRewards
+  C_WildcardRewards.GetScrollOfFortuneLimits
+  C_WildcardRewards.GetScrollOfFortuneRewardsReleaseInfo
+  C_WorldMap.CanShowPOI
+  C_WorldMap.GetCurrentMapID
+  C_WorldMap.GetMapFileByAreaID
+  C_WorldMap.GetMapFileByZoneID
+  C_WorldMap.GetMapIDByAreaID
+  C_WorldMap.GetMapIDByZoneID
+  C_WorldMap.GetMapPosition
+  C_WorldMap.GetPOIFilter
+  C_WorldMap.GetVisiblePOI
+  C_WorldMap.GetWorldPosition
+  C_WorldMap.GetZoneIDByAreaID
+  C_WorldMap.IsOnCityMap
+  C_WorldMap.IsOnContinentMap
+  C_WorldMap.SetPOIFilter
+  C_WorldMap.SetPOIFilters
+  C_WorldMap.xyz
+C_AccountInfo
+C_AddonPanel
+C_Appearance
+C_AppearanceCollection
+C_AppearanceOutfit
+C_AssetQueryService
+C_Aura
+C_BugTracker
+C_BuildCreator
+C_BuildDraft
+C_BuildEditor
+C_CVar
+C_Cache
+C_Callboard
+C_CallboardCache
+C_Challenge
+C_ChallengeMode
+C_CharacterAdvancement
+C_CharacterCreate
+C_CharacterCustomizationUnlocks
+C_CharacterList
+C_ClassInfo
+C_CoA
+C_Config
+C_ContentLoader
+C_CustomStore
+C_Deflate
+C_DraftRewards
+C_EquipmentSet
+C_ExtraActionButton
+C_Flipbook
+C_Format
+C_GMTicket
+C_GameMode
+C_Gossip
+C_GroupFinder
+C_HighRisk
+C_Hook
+C_Instance
+C_InventoryState
+C_Item
+C_ItemSet
+C_Keystones
+C_LFG
+C_Logger
+C_LootLockout
+C_Manastorm
+C_Map
+C_MysticEnchant
+C_MysticEnchantPreset
+C_MythicPlus
+C_NamePlate
+C_NamePlateManager
+C_Player
+C_PlayerPoll
+C_PlayerTicket
+C_PopupQueue
+C_PrimaryStat
+C_Quest
+C_QuestLog
+C_Realm
+C_RealmMerge
+C_RealmSelect
+C_RecoveryService
+C_Scenario
+C_Serialize
+C_SkillCard
+C_SkillCardCollection
+C_Spell
+C_SpellActivationOverlay
+C_SuperTrack
+C_TemporalContracts
+C_Timer
+C_Token
+C_TrialCreator
+C_Tutorial
+C_UICamera
+C_VanityCollection
+C_Wildcard
+C_WildcardRewards
+C_WorldMap
