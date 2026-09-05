@@ -12,28 +12,49 @@ findings), `.scratch/coa-preservation/map.md` (the original plan).
 
 # 0. Status at time of writing — READ FIRST
 
-**The servers were still answering at 2026-09-05 16:33, more than six hours after the
-announced 10:00 shutdown.**
+**The servers are down. The archive is closed.**
+
+Verified 2026-09-05 16:40 by protocol probe, not by port check — the distinction matters
+and I initially got this wrong.
 
 ```
-logon  51.210.230.10:3724  -> reachable
-realm  51.254.7.227:8100   -> reachable
+world  51.254.7.227:8100   TCP accepted, then SILENT
+logon  51.210.230.10:3724  TCP accepted, then SILENT
 ```
 
-`Ascension.exe` is not running and no game traffic is flowing; the last few KB of pcap
-growth came from the reachability probe itself, not from play. But TCP is being accepted,
-which means **the capture window may still be open** and the coverage gaps below may still
-be fillable. This should be checked by actually logging in before assuming the archive is
-closed.
+Both endpoints still complete a TCP handshake, which is why an earlier port check made it
+look like the window was still open. It was not. The world server **must speak first** —
+a live one sends `SMSG_AUTH_CHALLENGE` immediately on connect. It sends nothing. A valid
+GRUNT logon challenge to the auth server likewise draws no reply. What is answering is a
+leftover listener or an edge device, not the game.
 
-Current state:
+**Correction:** an earlier version of this section claimed the capture window might still be
+open, on the strength of the TCP handshake alone. That was wrong, and it was the kind of
+wrong that would have sent someone chasing a dead server. A TCP accept is not a live
+service.
+
+One thing did change since the session began: `ascension.gg`, `www.ascension.gg` and
+`launcher.ascension.gg` **now resolve** (Cloudflare, 172.67.70.128 / 104.26.x). They were
+NXDOMAIN on 2026-08-31 and during most of this session — most likely GFW interference at
+the time rather than a real removal, so the map's inference that the web infrastructure had
+been dismantled early should be treated with suspicion. The game servers are genuinely gone;
+the website is not.
+
+Final state:
 
 | | |
 |---|---|
-| capture process | running (`CoA capture - DO NOT CLOSE`) |
+| game servers | **down** (TCP accepted, protocol silent) |
+| capture process | still running, nothing left to capture |
 | pcap | `D:\coa-capture\coa_00001_20260904135355.pcapng`, ~31.7 MB |
 | memory dump | `D:\coa-capture\Ascension-472-0904-1426.dmp`, 1.68 GB |
-| repo | 10 commits, pushed to `github.com/maybe1046/Projectphoneix` (private) |
+| client + backup | intact, 39.1 GB each |
+| extracted client data | `D:\coa-extract\`, 1,585 files |
+| repo | pushed to `github.com/maybe1046/Projectphoneix` (private) |
+
+Everything that required a living server is now fixed in whatever state it reached.
+Everything else — the MPQ contents, the opcode table, the extracted Lua, the captured
+bodies, the memory dump — is offline work with no deadline.
 
 ---
 
@@ -506,21 +527,30 @@ Re-measure with `python research/harvest_capture.py`.
 
 # 11. What remains
 
-**If the servers really are still up** (§0), in priority order:
+Everything that needed a living server is now closed. What was captured is what there is.
 
-1. **Log in and check.** Everything below depends on it.
-2. **Transmog** — the only irreplaceable gap.
-3. **Hand of Fate, mail** — zero coverage.
-4. Re-run `harvest_capture.py` after each batch.
+**Offline, no deadline:**
 
-**Regardless of server state**, offline and unhurried:
+1. **RC4 / session-key recovery** from `Ascension-472-0904-1426.dmp` (§5.2), then header
+   framing of the pcap. This is the highest-value remaining task: it converts 31.7 MB of
+   readable-but-unframed traffic into an opcode-by-opcode record, and settles whether
+   `SMSG_PATCH_*` fired.
+2. **Per-system specification** from the 338,882 lines of extracted Lua plus the captured
+   bodies. The Lua gives every client-side entry point; the capture gives real server
+   responses for the systems that were exercised.
+3. **DBC parsing** — 349 tables in `D:\coa-extract\`, the data foundation for any future
+   server.
+4. The map's deferred decisions: emulator base, spec structure, which systems get
+   specified first.
 
-- RC4 / session-key recovery from the dump, then header framing, then per-system wire
-  formats.
-- Per-system specification from the extracted Lua plus captured traffic.
-- The map's deferred decisions: emulator base, spec structure, which systems get specified.
+**Permanently lost:**
 
-**Never done, and now probably moot:** the guide and addon were finished, checksummed and
-emailed but — as far as this session knows — **never actually posted to the community**.
-That was the only item with a hard deadline, and the window for other people's captures has
-most likely closed.
+- Hand of Fate and mail traffic — zero coverage, never captured.
+- Transmog appearance data beyond the 2 fragments — the on-disk files are 0 bytes, so this
+  existed only on the server.
+- Everything else nobody exercised while the servers lived.
+
+**Never done:** the guide and addon were finished, checksummed and emailed but — as far as
+this session knows — never posted to the community. That was the only item with a hard
+deadline. Whatever other people might have captured, they did not capture because of this
+work.
